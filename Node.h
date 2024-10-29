@@ -17,6 +17,7 @@ public:
   // if root, either
   bool r;
   Node(int v);
+  Node(int v, bool col);
   ~Node();
   Node* insert(int v);
   Node* adjust();
@@ -28,6 +29,7 @@ public:
   std::string toString() const;
   std::ostream& printHelp(std::ostream& os, int dashes) const;
   Node* rotate();
+  Node* simpleRotate();
   Node* sibling();
 };
 

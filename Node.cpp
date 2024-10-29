@@ -1,4 +1,5 @@
 #include "Node.h"
+#include <stdexcept>
 
 
 Node::Node(int v){
@@ -72,6 +73,28 @@ std::ostream& operator<<(std::ostream& os, const Node& node){
   node.printHelp(os,0);
   return os;
 }
+/*
+Node* Node::simpleRotate(){
+  Node* n = this;
+  Node* parent = n->parent;
+  if (parent == NULL)
+    throw std::invalid_argument("parent can't be NULL");
+  Node* gp = parent->parent;
+  bool dir = n->r;
+  if (!dir){
+    if (gp != )
+    gp->addR(n);
+    parent->addL(n->right);
+    n->addR(parent);
+  }
+  else{
+    gp->addL(n);
+    parent->addR(n->left);
+    n->addL(parent);
+  }
+
+}
+*/
 Node* Node::rotate(){
   Node* n = this;
   Node* parent = n->parent;
